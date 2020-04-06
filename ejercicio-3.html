@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 3</title>
+
+  <style>
+
+    body * {
+      margin: 0;
+      box-sizing: border-box;
+      overflow: hidden;
+    }
+
+    body {
+      margin: 0;
+    }
+
+    .main-container {
+      position: relative;
+    }
+    .sky {
+      width: 100%;
+      height: 450px;
+      background-color: #79c0e4;
+    }
+
+    .floor {
+      width: 100%;
+      height: 180px;
+      background-color: #f1eddb;
+    }
+
+    .sun {
+      position: absolute;
+      width: 15%;
+      min-width: 150px;
+      left: 6rem;
+      top: 2rem;
+      animation-name: opacidad;
+      animation-duration: 2s;
+    }
+
+    .texto {
+      font-family:Verdana, Geneva, Tahoma, sans-serif;
+      position: absolute;
+      left: 6rem;
+      top: 14rem;
+      color: white;
+      opacity: 0;
+      animation-name: opacidad;
+      animation-duration: 1s;
+      animation-delay: 1s;
+      animation-fill-mode: forwards;
+    }
+
+    p {
+      padding-top: .5rem;
+    }
+
+    .palm-tree {
+      position: absolute;
+      width: 184px;
+      left: 50%;
+      top: 20rem;
+    }
+
+    .sun-umbrella {
+      position: absolute;
+      width: 150px;
+      left: -10rem;
+      bottom: 6rem;
+      animation-name: move-umbrella;
+      animation-duration: 1s;
+      animation-delay: 1s;
+      animation-fill-mode: forwards;
+
+    }
+
+    .people {
+      width: 300px;
+      position: absolute;
+      bottom: 0;
+      right: 12rem;
+    }
+
+    .beach-ball {
+      position: absolute;
+      width: 50px;
+      bottom: 3rem;
+      right: -6rem;
+      animation-name: move-ball;
+      animation-duration: 1s;
+      animation-delay: 1s;
+      animation-fill-mode: forwards;
+    }
+
+    .tronco, .hojas {
+      opacity: 0;
+      animation-name: opacidad;
+      animation-duration: 0.5s;
+      animation-fill-mode: forwards;
+    }
+
+    .tronco {
+      animation-delay: 1s;
+    }
+
+    .hojas {
+      animation-delay: 1.5s;
+    }
+
+
+    @keyframes opacidad {
+      0% {opacity: 0;}
+      100% {opacity: 1;}
+    }
+
+    @keyframes move-umbrella {
+      0% {left: -10rem;}
+      100% {left: 4rem;}
+    }
+
+    @keyframes move-ball {
+      0% {right: -6rem;}
+      100% {right: 12rem;}
+    }
+
+
+  </style>
+</head>
+
+<body>
+  <main class="main-container">
+    <div class="sky"></div>
+    <div class="floor"></div>
+  </main>
+
+  <object class="sun" data="img/ejercicio-3_sun.svg" type="image/svg+xml"></object>
+
+  <div class="texto">
+    <h1>Vive el verano</h1>
+    <p>Con la protección del bloqueador solar número 1 de Chile, podrás tener un verano protegido junto a toda tu familia</p>
+  </div>
+
+  <svg class="palm-tree" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 59 59">
+    <path class="tronco" d="M30.34 17.966c-.114.009-.224.034-.34.034a3.963 3.963 0 0 1-2.52-.917c.319.57.52 1.215.52 1.917 0 .6-.1 1.164-.378 1.675C29.698 31.774 32.325 51.675 26 58h14s-.39-26.086-9.66-40.034z" fill="#805333"/>
+    <g class="hojas">
+      <circle cx="30" cy="14" r="4" fill="#cbb292"/>
+      <path d="M36.856 5.684c-3.486.934-6.354 2.7-8.138 4.545A3.954 3.954 0 0 1 30 10a3.985 3.985 0 0 1 3.772 2.722l3.188-.854.931-2.32 1.967 1.544L50 8.374c-.715-2.667-6.742-4.405-13.144-2.69z" fill="#4fba6f"/>
+      <path d="M27.563 10.849c-.86-2.6-3.409-5.828-7.19-8.117C14.703-.699 8.43-.71 7 1.652l8.983 5.437 2.319-.934.248 2.488 7.531 4.558a3.982 3.982 0 0 1 1.482-2.352z" fill="#4c8056"/>
+      <path d="M26 14c0-.33.051-.646.127-.953-2.019-1.85-7.016-2.771-12.271-1.362C7.454 13.4 3.103 17.918 3.818 20.586l10.142-2.718.931-2.32 1.967 1.544 4.737-1.269A3.957 3.957 0 0 1 24 15c.165 0 .322.029.482.049l1.581-.424A4.023 4.023 0 0 1 26 14z" fill="#4fba6f"/>
+      <path d="M26.501 15.902A3.956 3.956 0 0 0 24 15a4 4 0 1 0 4 4c0-.692-.192-1.334-.501-1.902a3.986 3.986 0 0 1-.998-1.196z" fill="#7f6e5d"/>
+    </g>
+  </svg>
+
+  <object class="sun-umbrella" data="img/ejercicio-3_sun-umbrella.svg" type="image/svg+xml"></object>
+
+  <object class="people" data="img/ejercicio-3_people.svg" type="image/svg+xml"></object>
+
+  <object class="beach-ball" data="img/ejercicio-3_beach-ball.svg" type="image/svg+xml"></object>
+</body>
+</html>
